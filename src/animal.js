@@ -32,9 +32,9 @@ Animal.prototype.feed = function(){
 
 Animal.prototype.sleep = function(){
   if (this.awake === true){
-    return this.awake === false;
+    return this.awake = false;
   }
-}
+};
 
 
 

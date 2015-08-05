@@ -38,7 +38,7 @@ describe('Animal', function(){
 
   describe('#sleep', function(){
     it('should initially be sleeping', function(){
-      // add spec
+      expect(animal.awake).toEqual(false);
     });
   });
 
