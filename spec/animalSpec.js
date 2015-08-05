@@ -20,7 +20,7 @@ describe('Animal', function(){
 
   describe('#growUp', function(){
     it('should increment the age by one', function(){
-      // add spec
+      expect(animal.growUp()).toEqual(28);
     });
   });
 

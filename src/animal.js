@@ -2,6 +2,7 @@ function Animal(name, age, kind){
   this.name = name;
   this.age = age;
   this.kind = kind;
+  this.awake = false;
 }
 
 Animal.prototype.oink = function(){
@@ -11,5 +12,14 @@ Animal.prototype.oink = function(){
     return "I'm not a pig";
   }
 };
+
+Animal.prototype.growUp = function(){
+  return this.age += 1;
+};
+
+
+
+
+
 
 module.exports = Animal;
