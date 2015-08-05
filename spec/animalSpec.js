@@ -26,13 +26,13 @@ describe('Animal', function(){
 
   describe('#awake', function(){
     it('should initially be off', function(){
-      // add spec
+      expect(animal.awake).toEqual(false);
     });
   });
 
    describe('#wakeUp', function(){
     it('should change state to awake', function(){
-      // add spec
+      expect(animal.wakeUp()).toEqual(true);
     });
   });
 
@@ -44,10 +44,11 @@ describe('Animal', function(){
 
   describe('#feed', function(){
     it('should get fed if awake', function(){
-      // add spec
+      animal.wakeUp();
+      expect(animal.feed()).toEqual("NOM NOM NOM");
     });
     it('not should get fed if sleeping', function(){
-      // add spec
+      expect(animal.feed()).toEqual(false);
     });
   });
 

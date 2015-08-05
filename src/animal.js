@@ -17,8 +17,24 @@ Animal.prototype.growUp = function(){
   return this.age += 1;
 };
 
+Animal.prototype.wakeUp = function(){
+  return this.awake = true;
+};
 
+Animal.prototype.feed = function(){
+  if (this.awake === true){
+    return "NOM NOM NOM";
+  }
+  else{
+    return this.awake;
+  }
+};
 
+Animal.prototype.sleep = function(){
+  if (this.awake === true){
+    return this.awake === false;
+  }
+}
 
 
 
