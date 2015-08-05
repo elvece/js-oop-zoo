@@ -1,8 +1,10 @@
-# JavaScript Zoo
+## JavaScript Zoo
+
+***This repo contains my solution to the following exercise:***
 
 Lions, tigers, and bears..
 
-## Create an animal class with:
+### Create an animal class with:
 
 **Properties**:
 
@@ -19,7 +21,7 @@ Lions, tigers, and bears..
 - `wakeUp()` - a method that changes the awake property to `true`
 - `sleep()` - a method that changes the awake property to `false`
 
-## Create a zoo class with:
+### Create a zoo class with:
 
 - `name`
 - `location`
@@ -33,7 +35,7 @@ Lions, tigers, and bears..
 - `removeAnimal()` - a method that removes an animal from the animals array ONLY if the zoo is open.
 
 
-## Steps
+### Steps
 
 - Write the tests for the Animal class
 - Write the code (in the *"src" folder) necessary to make the tests pass
