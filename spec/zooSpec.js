@@ -14,36 +14,41 @@ describe('Zoo', function(){
 
   describe('#changeLocation', function(){
     it('should change locations', function(){
-      // add spec
+      expect(zoo.changeLocation('San Diego')).toEqual('San Diego');
     });
   });
 
   describe('#open', function(){
     it('should change status to open', function(){
-      // add spec
+      expect(zoo.open()).toEqual('Open!');
     });
   });
 
+  describe('#close', function(){
+    it('should change status to closed', function(){
+      expect(zoo.close()).toEqual('Closed!');
+    });
+  });
 
   describe('#isOpen', function(){
     it('should see if the zoo is open', function(){
-      // add spec
+      expect(zoo.open()).toEqual('Open!');
     });
     it('should see if the zoo is closed', function(){
-      // add spec
+      expect(zoo.close()).toEqual('Closed!');
     });
   });
 
   describe('#animals', function(){
     it('should initially be empty', function(){
-      // add spec
+      expect(this.animals).toEqual([]);
     });
   });
 
 
   describe('#addAnimal', function(){
     it('should only add an animal to the animals array when the zoo is open', function(){
-      // add spec
+      expect(this.animals.addAnimal()).toEqual();
     });
     it('should add an animal to the animals array', function(){
       // add spec
