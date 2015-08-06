@@ -51,4 +51,12 @@ Zoo.prototype.addAnimal = function(animal) {
   }
 };
 
+Zoo.prototype.removeAnimal = function(animal) {
+  var index = this.animals.indexOf(animal);
+  if(index >= 0){
+    this.animals.splice(index);
+  }
+  return this.animals;
+};
+
 module.exports = Zoo;
