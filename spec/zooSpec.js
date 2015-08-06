@@ -41,33 +41,42 @@ describe('Zoo', function(){
 
   describe('#animals', function(){
     it('should initially be empty', function(){
-      expect(this.animals).toEqual([]);
+      expect(zoo.animals).toEqual([]);
     });
   });
 
 
   describe('#addAnimal', function(){
     it('should only add an animal to the animals array when the zoo is open', function(){
-      expect(this.animals.addAnimal()).toEqual();
+      zoo.addAnimal(pig);
+      expect(zoo.addAnimal(pig)).toEqual('Zoo is closed');
     });
     it('should add an animal to the animals array', function(){
-      // add spec
+      zoo.open();
+      zoo.addAnimal(pig);
+      expect(zoo.animals).toEqual([pig]);
     });
 
     it('should only add instances of animals', function(){
-      // add spec
+      zoo.open();
+      var door = new Zoo("Bronx","NYC");
+      expect(zoo.addAnimal(door)).toEqual('Not a valid animal');
     });
 
     it('should not add duplicates', function(){
-      // add spec
+      zoo.open();
+      zoo.addAnimal(pig);
+      expect(zoo.addAnimal(pig)).toEqual("Already an animal!");
     });
   });
 
   describe('#removeAnimal', function(){
     it('should remove an animal from the animals array if the zoo is open', function(){
-      // add spec
+      zoo.status = "Open!";
+      expect().toEqual();
     });
   });
 });
+
 
 

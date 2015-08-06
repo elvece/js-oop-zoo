@@ -23,18 +23,32 @@ Zoo.prototype.close = function() {
 };
 
 Zoo.prototype.isOpen = function() {
-  if (this.staus == 'Open!'){
-    return 'Open!';
+  if (this.status == 'Open!'){
+    return this.status;
   }
   else {
     return 'Closed!';
   }
 };
 
-Zoo.prototype.addAnimal = function() {
-  // body...
+Zoo.prototype.addAnimal = function(animal) {
+  if (this.status == 'Open!'){
+    if (animal instanceof Animal){
+      if(this.animals.indexOf(animal) >= 0){
+        return "Already an animal!";
+      }
+      else {
+        this.animals.push(animal);
+        return this.animals[this.animals.length - 1];
+      }
+    }
+    else {
+      return "Not a valid animal";
+    }
+  }
+  else {
+    return "Zoo is closed";
+  }
 };
-
-
 
 module.exports = Zoo;
