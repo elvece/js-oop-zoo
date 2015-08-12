@@ -47,24 +47,25 @@ describe('Zoo', function(){
 
 
   describe('#addAnimal', function(){
+    beforeEach(function(){
+      zoo.open();
+    });
     it('should only add an animal to the animals array when the zoo is open', function(){
+      zoo.close();
       zoo.addAnimal(pig);
       expect(zoo.addAnimal(pig)).toEqual('Zoo is closed');
     });
     it('should add an animal to the animals array', function(){
-      zoo.open();
       zoo.addAnimal(pig);
       expect(zoo.animals).toEqual([pig]);
     });
 
     it('should only add instances of animals', function(){
-      zoo.open();
       var door = new Zoo("Bronx","NYC");
       expect(zoo.addAnimal(door)).toEqual('Not a valid animal');
     });
 
     it('should not add duplicates', function(){
-      zoo.open();
       zoo.addAnimal(pig);
       expect(zoo.addAnimal(pig)).toEqual("Already an animal!");
     });
