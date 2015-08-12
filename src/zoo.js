@@ -61,8 +61,8 @@ Zoo.prototype.addAnimal = function(animal) {
 //method of the zoo class that removes the animal from the zoo animal array if the animal is in the animals array, returns the zoo animal array
 Zoo.prototype.removeAnimal = function(animal) {
   var index = this.animals.indexOf(animal);
-  if(index >= 0){
-    this.animals.splice(index);
+  if(this.status == 'Open!' && index >= 0){
+    this.animals.splice(index, 1);
   }
   return this.animals;
 };

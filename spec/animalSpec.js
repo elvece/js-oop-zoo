@@ -38,6 +38,7 @@ describe('Animal', function(){
 
   describe('#sleep', function(){
     it('should initially be sleeping', function(){
+      //could wake it up then put it to sleep to see if both functions working
       expect(animal.awake).toEqual(false);
     });
   });
