@@ -35,7 +35,9 @@ describe('Zoo', function(){
       zoo.open();
       expect(zoo.isOpen()).toEqual('The zoo is open!');
     });
+
     it('should see if the zoo is closed', function(){
+      zoo.close();
       expect(zoo.isOpen()).toEqual('The zoo is closed!');
     });
   });
@@ -48,17 +50,22 @@ describe('Zoo', function(){
 
 
   describe('#addAnimal', function(){
+
     beforeEach(function(){
       zoo.open();
     });
+
     it('should only add an animal to the animals array when the zoo is open', function(){
       zoo.close();
       zoo.addAnimal(pig);
       expect(zoo.addAnimal(pig)).toEqual('Zoo is closed');
     });
+
     it('should add an animal to the animals array', function(){
       zoo.addAnimal(pig);
       expect(zoo.animals).toEqual([pig]);
+      zoo.addAnimal(lion);
+      expect(zoo.animals).toEqual([pig, lion]);
     });
 
     it('should only add instances of animals', function(){
@@ -77,6 +84,7 @@ describe('Zoo', function(){
       zoo.open();
       zoo.addAnimal(pig);
       expect(zoo.removeAnimal(pig)).toEqual([]);
+      expect(zoo.animals.length).toEqual(0);
     });
   });
 });

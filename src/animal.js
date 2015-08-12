@@ -32,7 +32,7 @@ Animal.prototype.feed = function(){
   if (this.awake === true){
     return "NOM NOM NOM";
   }
-  else{
+  else {
     return this.awake;
   }
 };

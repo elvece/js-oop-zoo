@@ -41,6 +41,7 @@ describe('Animal', function(){
       //could wake it up then put it to sleep to see if both functions working
       expect(animal.awake).toEqual(false);
     });
+    //another it to check alt condition
   });
 
   describe('#feed', function(){
@@ -49,6 +50,7 @@ describe('Animal', function(){
       expect(animal.feed()).toEqual("NOM NOM NOM");
     });
     it('not should get fed if sleeping', function(){
+      animal.sleep();
       expect(animal.feed()).toEqual(false);
     });
   });

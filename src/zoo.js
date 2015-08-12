@@ -29,7 +29,7 @@ Zoo.prototype.close = function() {
 
 //method of zoo class that checks to see if the zoo is open
 Zoo.prototype.isOpen = function() {
-  if (this.status == 'Open!'){
+  if (this.status === 'Open!'){
     return 'The zoo is open!';
   }
   else {
