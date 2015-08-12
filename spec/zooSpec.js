@@ -33,11 +33,10 @@ describe('Zoo', function(){
   describe('#isOpen', function(){
     it('should see if the zoo is open', function(){
       zoo.open();
-      expect(zoo.isOpen()).toEqual('Open!');
+      expect(zoo.isOpen()).toEqual('The zoo is open!');
     });
     it('should see if the zoo is closed', function(){
-      zoo.close();
-      expect(zoo.isOpen()).toEqual('Closed!');
+      expect(zoo.isOpen()).toEqual('The zoo is closed!');
     });
   });
 

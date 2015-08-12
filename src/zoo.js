@@ -27,13 +27,13 @@ Zoo.prototype.close = function() {
   return this.status;
 };
 
-//method of zoo class that checks to see if the zoo is open, otherwise it returns the closed status
+//method of zoo class that checks to see if the zoo is open
 Zoo.prototype.isOpen = function() {
   if (this.status == 'Open!'){
-    return this.status;
+    return 'The zoo is open!';
   }
   else {
-    return 'Closed!';
+    return 'The zoo is closed!';
   }
 };
 
